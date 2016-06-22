@@ -8,18 +8,41 @@
 
 body {
   font: normal 16px/1.5 "Helvetica Neue", sans-serif;
-  background: #456990;
+  font-family: 'Roboto', sans-serif;
+  background: #212121;
   color: #fff;
   overflow-x: hidden;
   padding-bottom: 50px;
 }
 
+a {
+  color: #fff;
+  font-style: italic;
+  font-size: 12px;
+}
+
+/* TODO:  Clean the sticky class*/
+/*.sticky{
+  position: fixed;
+   top: 0;
+   align-items: center;
+   background: #303F9F;
+}*/
+
+.img-responsive {
+  margin: 0 auto;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+figcaption {
+  padding-top: 10px;
+}
 
 /* INTRO SECTION
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .intro {
-  background: #F45B69;
+  background: #3F51B5;
   padding: 100px 0;
 }
 
@@ -31,7 +54,9 @@ body {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 150px;
+  font-family: 'Amatic SC', cursive;
+  font-weight: bold;
 }
 
 
@@ -63,7 +88,7 @@ h1 {
   bottom: 0;
   width: 400px;
   padding: 15px;
-  background: #F45B69;
+  background: #3F51B5;
 }
 
 .timeline ul li div::before {
@@ -82,7 +107,7 @@ h1 {
 .timeline ul li:nth-child(odd) div::before {
   left: -15px;
   border-width: 8px 16px 8px 0;
-  border-color: transparent #F45B69 transparent transparent;
+  border-color: transparent #3F51B5 transparent transparent;
 }
 
 .timeline ul li:nth-child(even) div {
@@ -92,7 +117,7 @@ h1 {
 .timeline ul li:nth-child(even) div::before {
   right: -15px;
   border-width: 8px 0 8px 16px;
-  border-color: transparent transparent transparent #F45B69;
+  border-color: transparent transparent transparent #3F51B5;
 }
 
 .timeline ul li::after {
@@ -101,7 +126,7 @@ h1 {
 }
 
 .timeline ul li.in-view::after {
-  background: #F45B69;
+  background: #3F51B5;
 }
 
 .timeline ul li div {
@@ -149,6 +174,6 @@ h1 {
   .timeline ul li:nth-child(even) div::before {
     left: -15px;
     border-width: 8px 16px 8px 0;
-    border-color: transparent #F45B69 transparent transparent;
+    border-color: transparent #3F51B5 transparent transparent;
   }
 }

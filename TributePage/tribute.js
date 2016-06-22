@@ -15,12 +15,26 @@ function isElementInViewport(el) {
    );
 }
 
+function sticky_relocate() {
+    var window_top = $(window).scrollTop();
+    var div_top = $('#sticky-anchor').offset().top;
+    if (window_top > div_top)
+        $('#sticky-element').addClass('sticky');
+    else
+        $('#sticky-element').removeClass('sticky');
+}
+
+
 function callbackFunc() {
   for (var i = 0; i < items.length; i++) {
     if (isElementInViewport(items[i])) {
       items[i].classList.add("in-view");
     }
   }
+    $(function() {
+        $(window).scroll(sticky_relocate);
+        sticky_relocate();
+    });
 }
 
 window.addEventListener("load", callbackFunc);
