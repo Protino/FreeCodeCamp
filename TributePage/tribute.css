@@ -9,7 +9,7 @@
 body {
   font: normal 16px/1.5 "Helvetica Neue", sans-serif;
   font-family: 'Roboto', sans-serif;
-  background: #212121;
+  background: #212121 !important;
   color: #fff;
   overflow-x: hidden;
   padding-bottom: 50px;
@@ -28,31 +28,31 @@ body {
 }
 /*Unvisited link */
 a:link {
-    color: white;
+    color: white !important;
 }
 
 /* visited link */
 a:visited {
-    color: darkgrey;
+    color: darkgrey !important;
 }
 
 /* mouse over link */
 a:hover {
-    color: lightgrey;
+    color: lightgrey !important;
 }
 
 /* selected link */
 a:active {
-    color: lightgrey;
+    color: lightgrey !important;
 }
 
 .credits a{
-  font-style: normal;
-  font-size: 17px;
+  font-style: normal !important;
+  font-size: 17px !important;
 }
 
 .credits {
-  text-align: center;
+  text-align: center ;
   width: 100%;
 }
 
