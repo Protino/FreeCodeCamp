@@ -15,8 +15,49 @@ body {
   padding-bottom: 50px;
 }
 
+/* Preload stuff */
+.intro {display: none;}
+.timeline {display:none;}
+.credits {display: none;}
+.preload {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+/*Unvisited link */
+a:link {
+    color: white;
+}
+
+/* visited link */
+a:visited {
+    color: darkgrey;
+}
+
+/* mouse over link */
+a:hover {
+    color: lightgrey;
+}
+
+/* selected link */
+a:active {
+    color: lightgrey;
+}
+
+.credits a{
+  font-style: normal;
+  font-size: 17px;
+}
+
+.credits {
+  text-align: center;
+  width: 100%;
+}
+
+
 a {
-  color: #fff;
   font-style: italic;
   font-size: 12px;
 }

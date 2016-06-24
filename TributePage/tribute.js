@@ -1,7 +1,14 @@
 
-var items;
+var items;//Holds number of div items in the timeline section
 window.onload = function() {
+  $(".preload").fadeOut(function(){
+    $(".intro").fadeIn();
+    $(".timeline").fadeIn();
+    $(".credits").fadeIn();
+  });
   items = document.querySelectorAll(".timeline li");
+  window.addEventListener("load", callbackFunc);
+  window.addEventListener("scroll", callbackFunc);
 }
 
 // code for the isElementInViewport function
@@ -15,6 +22,7 @@ function isElementInViewport(el) {
    );
 }
 
+// TODO: Make the div tag containg person name stick at the top after being scrolled
 function sticky_relocate() {
     var window_top = $(window).scrollTop();
     var div_top = $('#sticky-anchor').offset().top;
@@ -24,18 +32,11 @@ function sticky_relocate() {
         $('#sticky-element').removeClass('sticky');
 }
 
-
 function callbackFunc() {
   for (var i = 0; i < items.length; i++) {
     if (isElementInViewport(items[i])) {
       items[i].classList.add("in-view");
     }
   }
-    $(function() {
-        $(window).scroll(sticky_relocate);
-        sticky_relocate();
-    });
+  sticky_relocate();
 }
-
-window.addEventListener("load", callbackFunc);
-window.addEventListener("scroll", callbackFunc);
